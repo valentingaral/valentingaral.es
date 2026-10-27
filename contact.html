@@ -31,6 +31,7 @@ select.fld{appearance:none;-webkit-appearance:none;background-image:linear-gradi
 .portrait:hover{filter:grayscale(0) contrast(1)}
 #sent{display:none}#sent:target{display:block}
 .navcta:hover{background:#FFFFFF !important}
+.btng{transition:background .2s ease}.btng:hover{background:#FFFFFF !important}
 @media (max-width:720px){header nav{gap:10px 12px !important;letter-spacing:0.04em !important}}
 </style>
 
@@ -114,7 +115,7 @@ select.fld{appearance:none;-webkit-appearance:none;background-image:linear-gradi
 <label style="display: flex; flex-direction: column; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #BDBDBD">City or online<input class="fld" type="text" name="location" style="box-sizing: border-box; width: 100%; min-height: 52px; padding: 12px 16px; background: #141414; border: 1px solid #3A3A3A; border-radius: 0; color: #FFFFFF; font-family: 'Archivo', sans-serif; font-size: 17px; text-transform: none; letter-spacing: 0"></label>
 <label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #BDBDBD">Message *<textarea class="fld" name="message" rows="6" required style="box-sizing: border-box; width: 100%; min-height: 52px; padding: 12px 16px; background: #141414; border: 1px solid #3A3A3A; border-radius: 0; color: #FFFFFF; font-family: 'Archivo', sans-serif; font-size: 17px; text-transform: none; letter-spacing: 0; resize: vertical"></textarea></label>
 <div style="grid-column: 1 / -1">
-<button type="submit" style="display: inline-flex; align-items: center; min-height: 64px; padding: 0 36px; background: #D4FF00; color: #0A0A0A; border: 0; border-radius: 0; cursor: pointer; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase; letter-spacing: 0.02em">Send enquiry</button>
+<button class="btng" type="submit" style="display: inline-flex; align-items: center; min-height: 64px; padding: 0 36px; background: #D4FF00; color: #0A0A0A; border: 0; border-radius: 0; cursor: pointer; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase; letter-spacing: 0.02em">Send enquiry</button>
 </div>
 </form>
 <div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
