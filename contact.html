@@ -27,6 +27,8 @@ body{margin:0;background:#0A0A0A}
 a{color:#FFFFFF}a:hover{color:#D4FF00}
 .fld:focus{outline:2px solid #D4FF00;outline-offset:0;border-color:#D4FF00}
 select.fld{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,#D4FF00 50%),linear-gradient(135deg,#D4FF00 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.portrait{filter:grayscale(1) contrast(1.15);transition:filter .5s ease}
+.portrait:hover{filter:grayscale(0) contrast(1)}
 #sent{display:none}#sent:target{display:block}
 @media (max-width:720px){header nav{gap:10px 16px !important;letter-spacing:0.04em !important}}
 </style>
@@ -47,9 +49,14 @@ select.fld{appearance:none;-webkit-appearance:none;background-image:linear-gradi
 </header>
 
 <section id="top" style="max-width: 1440px; margin: 0 auto; padding: 48px clamp(16px, 4vw, 56px) 0">
+<div style="display: flex; flex-wrap: wrap; gap: 40px 64px; align-items: center">
+<div style="flex: 999 1 520px; min-width: 0">
 <p style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; color: #D4FF00">Keynote speaker / Moderator / Innovation consultant</p>
 <h1 style="margin: 0; font-weight: 900; font-stretch: 125%; font-size: clamp(36px, 6.5vw, 104px); line-height: 0.88; letter-spacing: -0.04em; text-transform: uppercase">Bring me<br>to your <span style="color: #D4FF00">stage</span>…</h1>
 <p style="margin: 28px 0 0; max-width: 820px; font-size: clamp(20px, 2vw, 26px); line-height: 1.35; color: #D9D9D9">Keynotes, panels, consulting and workshops on innovation, open innovation, startups, design thinking, Agile, Scrum, agrifood and foodtech. Available worldwide.</p>
+</div>
+<img class="portrait" src="assets/speaker/expofoodtech.jpg" alt="Valentin Garal speaking on a panel at Expo Foodtech F4F World Summit" style="display: block; flex: 1 1 300px; max-width: 440px; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%; background: #1A1A1A">
+</div>
 </section>
 
 <section id="services" style="max-width: 1440px; margin: 0 auto; padding: 36px clamp(16px, 4vw, 56px) 0">
