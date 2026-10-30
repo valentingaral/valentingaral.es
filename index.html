@@ -42,6 +42,8 @@ a{color:#FFFFFF}a:hover{color:#D4FF00}
 header nav{margin-left:auto}
 header .lang{margin-left:12px}
 @media (max-width:720px){header .lang{order:2;margin-left:0}header nav{order:3;width:100%;margin-left:0}header>a:first-child{font-size:17px !important;gap:10px !important}header>a:first-child img{width:38px !important;height:38px !important}header .lang svg{display:none !important}}
+.cvphoto{aspect-ratio:1387/1569}
+@media (min-width:860px){.cvphoto{aspect-ratio:auto;min-height:420px;flex:0 0 min(480px, 36vw) !important}}
 .navcta:hover{background:#FFFFFF !important}
 .btnw{transition:background .2s ease}.btnw:hover{background:#D4FF00 !important}
 .btng{transition:background .2s ease}.btng:hover{background:#FFFFFF !important}
@@ -99,9 +101,9 @@ header .lang{margin-left:12px}
 </section>
 
 <section id="cv" style="max-width: 1440px; margin: 0 auto; padding: 120px clamp(16px, 4vw, 56px)">
-<div style="display: flex; flex-wrap: wrap; gap: 48px 64px; align-items: flex-end; margin-bottom: 72px">
-<img src="assets/portrait-main.jpg" alt="Valentin Garal, innovation strategist" style="display: block; flex: 1 1 320px; max-width: 480px; width: 100%; aspect-ratio: 1387 / 1569; object-fit: cover; object-position: 50% 50%; background: #1A1A1A">
-<div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px 64px; align-items: stretch; margin-bottom: 72px">
+<div class="cvphoto" style="position: relative; flex: 1 1 320px; max-width: 480px; width: 100%; background: #1A1A1A"><img src="assets/portrait-main.jpg" alt="Valentin Garal, innovation strategist" style="position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%"></div>
+<div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 40px; justify-content: space-between">
 <h2 style="margin: 0; font-weight: 900; font-stretch: 125%; font-size: clamp(48px, 8vw, 128px); line-height: 0.88; letter-spacing: -0.04em; text-transform: uppercase">From design<br>to <span style="color: #D4FF00">strategy</span>.</h2>
 <p style="margin: 0; max-width: 460px; font-size: 19px; line-height: 1.5; color: #BDBDBD">My career started in industrial design, moved into innovation consulting and grew into building food innovation ecosystems. Today the focus is the intersection of strategy, agrifoodtech and agile execution.</p>
 </div>
