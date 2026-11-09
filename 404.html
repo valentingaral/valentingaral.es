@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Valentin Garal</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<script>
+// Old Cargo project links go straight to the design archive
+(function () {
+  var p = decodeURIComponent(location.pathname).toLowerCase();
+  var es = p.indexOf('/es/') === 0;
+  var old = /(humilite|ibdf|animam|stilleven|salvum|v100|banca|hair-cradle|xxy|filter\/|coal|marble|design|diseno|diseño)/;
+  if (old.test(p)) { location.replace(es ? '/es/design.html' : '/design.html'); }
+})();
+</script>
+<style>
+html, body { margin: 0; background: #0A0A0A; color: #FFFFFF; }
+body { font-family: 'Archivo', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+a { color: #FFFFFF; }
+header { padding: 24px clamp(16px, 4vw, 56px); border-bottom: 1px solid #2A2A2A; }
+header a { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; font-weight: 900; font-stretch: 125%; font-size: 20px; letter-spacing: -0.02em; text-transform: uppercase; }
+header img { width: 44px; height: 44px; display: block; }
+header b { color: #D4FF00; }
+main { flex: 1; max-width: 1440px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: clamp(48px, 8vw, 120px) clamp(16px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; gap: 32px; }
+.label { margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; color: #D4FF00; }
+h1 { margin: 0; font-weight: 900; font-stretch: 125%; font-size: clamp(44px, 10vw, 160px); line-height: 0.88; letter-spacing: -0.04em; text-transform: uppercase; }
+h1 span { color: #D4FF00; }
+p.text { margin: 0; max-width: 640px; font-size: clamp(18px, 1.8vw, 22px); line-height: 1.45; color: #D9D9D9; }
+.actions { display: flex; flex-wrap: wrap; gap: 16px; }
+.btn { display: inline-flex; align-items: center; min-height: 64px; padding: 0 36px; text-decoration: none; font-weight: 800; font-size: 18px; text-transform: uppercase; letter-spacing: 0.02em; transition: background .2s ease; }
+.btn.main { background: #D4FF00; color: #0A0A0A; }
+.btn.main:hover { background: #FFFFFF; }
+.btn.alt { border: 2px solid #FFFFFF; color: #FFFFFF; }
+.btn.alt:hover { color: #D4FF00; border-color: #D4FF00; }
+.note { margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.06em; color: #8A8A8A; }
+</style>
+</head>
+<body>
+<header><a href="/"><img src="/assets/logo-inverted.png" alt=""><span>Valentin Garal<b>.</b></span></a></header>
+<main>
+<p class="label" id="label">Error 404</p>
+<h1 id="title">This page<br>has <span>moved</span>.</h1>
+<p class="text" id="text">The link you followed belongs to an older version of the site. Everything is still here, just in a new place.</p>
+<div class="actions">
+<a class="btn main" id="home" href="/">Go to home</a>
+<a class="btn alt" id="contact" href="/contact.html">Contact</a>
+</div>
+<p class="note" id="note">Taking you to the home page in <span id="secs">8</span> seconds…</p>
+</main>
+<script>
+(function () {
+  var es = location.pathname.indexOf('/es/') === 0 || (navigator.language || '').toLowerCase().indexOf('es') === 0;
+  var home = '/';
+  if (es) {
+    home = '/es/';
+    document.documentElement.lang = 'es';
+    document.title = 'Página no encontrada | Valentin Garal';
+    document.getElementById('label').textContent = 'Error 404';
+    document.getElementById('title').innerHTML = 'Esta página<br>se ha <span>mudado</span>.';
+    document.getElementById('text').textContent = 'El enlace que has seguido es de una versión antigua de la web. Todo sigue aquí, solo que en otro sitio.';
+    var h = document.getElementById('home'); h.textContent = 'Ir a la home'; h.href = home;
+    var c = document.getElementById('contact'); c.textContent = 'Contacto'; c.href = '/es/contact.html';
+    document.getElementById('note').innerHTML = 'Te llevamos a la home en <span id="secs">8</span> segundos…';
+  }
+  var s = 8;
+  var t = setInterval(function () {
+    s -= 1;
+    var el = document.getElementById('secs'); if (el) el.textContent = s;
+    if (s <= 0) { clearInterval(t); location.href = home; }
+  }, 1000);
+})();
+</script>
+</body>
+</html>
